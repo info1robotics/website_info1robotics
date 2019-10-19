@@ -6,77 +6,87 @@ class TeamArea extends React.Component {
         teamMembers: [
             {
                 imgName: "iulia.jpeg",
-                name: "Stanciu Iulia-Cristina",
+                name: "Iulia Stanciu",
                 description: 'Team leader of the 3D Design team. Silver medalist at Romanian National Olympics in Astronomy and Astrophysics. ++(Custom clothing painter)'
             },
             {
                 imgName: "",
-                name: "Mihalcea-Simoniu Agatha",
+                name: "Agatha Mihalcea",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Raicu Ana",
+                name: "Ana Raicu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Avram Rares Stefan",
+                name: "Rares Avram",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Bobo",
+                name: "Vlad Stefanescu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Cîrnici David",
+                name: "David Cirnici",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Rosu Delia",
+                name: "Delia Rosu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Dumitru Horia",
+                name: "Horia Dumitru",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Andronache Madalina",
+                name: "Madalina Andronache",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Sandulescu Alexandru Nicolae",
+                name: "Alexandru Sandulescu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Georgescu Sebastian Andrei",
+                name: "Sebastian Georgescu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Staicu Matei",
+                name: "Matei Staicu",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Marussi",
+                name: "Matei Marussi",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Soare Stefan",
+                name: "Stefan Soare",
                 description: ""
             },
             {
                 imgName: "",
-                name: "Delia",
+                name: "Dana Lica",
+                description: ""
+            },
+            {
+                imgName: "",
+                name: "Tudor Avram",
+                description: ""
+            },
+            {
+                imgName: "",
+                name: "Luminita Avram",
                 description: ""
             },
 
@@ -89,10 +99,11 @@ class TeamArea extends React.Component {
     componentDidMount() {
         var result = [];
         for(var i of this.state.teamMembers) {
+            
             var card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card">
-                        <img src={process.env.PUBLIC_URL + i.imgName} className="card-img-top" />
+                        <img src={((i.imgName !== "") ? process.env.PUBLIC_URL + i.imgName : process.env.PUBLIC_URL + "default.jpeg")} className="card-img-top" />
                         <div className="card-body">
                             <h5 className="card-title text-center">{i.name}</h5>
                             <p className="card-text text-center">{i.description}</p>
