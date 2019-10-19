@@ -1,0 +1,306 @@
+//
+// imports
+//
+@import "../../node_modules/rfs/scss.scss";
+
+
+@font-face {
+  font-family: "Share Tech Mono";
+  src: url("../fonts/ShareTechMono-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("../fonts/SFMono-Regular.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("../fonts/SFMono-Light.otf") format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("../fonts/SFMono-Semibold.otf") format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+//
+// overrides
+//
+
+$green-c: #00942B;
+
+
+$theme-colors: ("primary": $green-c);
+
+
+
+$body-bg: #2b2b2b;
+$body-color: #FFFFFF;
+
+$enable-rounded: false;
+
+//
+// mixin functions
+//
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin madness {
+
+  @media screen and (min-width: 801px) {
+
+
+    .display-1 {
+      padding: 16px;
+    }
+  }
+
+  .accordion {
+    padding-left: 16px;
+    padding-right: 16px;
+
+
+    .card {
+
+
+      .btn-link {
+        @include font-size(2rem);
+        color: greenyellow !important;
+      }
+
+
+      .collapse {
+        background-color: #777777;
+      }
+    }
+  }
+}
+
+//
+// import bootstrap
+//
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//
+// scss
+//
+
+body {
+  @include font-size(1.05rem);
+  font-family: "SF Mono", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(218, 218, 218);
+  overflow-x: hidden; // >:)
+  background-color: transparent;
+}
+
+@for $index from 1 through 6 {
+  h#{$index} {
+    font-family: "Share Tech Mono", 'Courier New', Courier, monospace;
+  }
+
+  .display-#{$index} {
+    font-family: "Share Tech Mono", 'Courier New', Courier, monospace;
+  }
+}
+
+@for $index from 1 through 3 {
+  h#{$index} {
+    text-shadow: 10px 10px 0 #202020;
+  }
+
+  .display-#{$index} {
+    text-shadow: 10px 10px 0 #202020;
+  }
+}
+
+.navigation {
+  height: 5vh;
+}
+
+.landing-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  margin-bottom: 0;
+  box-sizing: border-box;
+
+  #vid-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+  }
+
+  #vid-background-dark {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -99;
+    background-color: rgba(0, 0, 0, 0.452);
+  }
+
+  .cont {
+    width: 90%;
+
+    .main-title {
+      overflow: hidden;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      @include font-size(5.8rem);
+      font-family: "Share Tech Mono", monospace;
+      background-color: whitesmoke; 
+      color: #1b1b1b;
+
+    }
+
+
+    .slogan {
+      width: auto;
+      margin-top: 1rem;
+      text-align: center;
+      @include font-size(2.3rem);
+      font-weight: bold;
+      letter-spacing: -3px;
+      font-family: "SF Mono", Arial, Helvetica, sans-serif;
+      color: $green * 1.4;
+    }
+  }
+
+}
+
+
+
+img.responsive-img-h {
+  display: block;
+
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 801px) {
+    max-width: 100%;
+    width: 70%;
+  }
+
+  height: auto;
+}
+
+#big-img {
+  box-shadow: 15px 15px 0 #202020;
+}
+
+
+.card {
+  background-color: #888888;
+  color: white;
+  box-shadow: 15px 15px 0 #202020;
+  height: 100%;
+  
+  .card-body {
+    height: 100%;
+  }
+}
+
+.member-card-col {
+  max-width: 400px;
+}
+
+.bg-dark {
+  background-color: $green-c !important;
+}
+
+@media screen and (max-width: 511px) {
+  #sponsorsCarousel>.carousel-inner>.carousel-item>img {
+    height: 337px;
+    width: 337px;
+  }
+
+}
+
+@media screen and (min-width: 512px) {
+  #sponsorsCarousel>.carousel-inner>.carousel-item>img {
+    height: 512px;
+    width: 512px;
+  }
+}
+
+
+#sponsorsCarousel>.carousel-inner>.carousel-item>.carousel-caption {
+  background: rgba(0, 0, 0, 0.171);
+}
+
+.card-title {
+  @include font-size(1.6rem);
+}
+
+.card-text {
+  @include font-size(0.9rem);
+}
+
+
+
+.team-area {
+  background-color: #2b2b2b;
+  padding-bottom: 16px;
+}
+
+.sponsors-area {
+  background-color: #2b2b2b;
+  padding-bottom: 16px;
+
+}
+
+.events-area {
+  background-color: #2b2b2b;
+
+  .past-events {
+    @include madness();
+  }
+
+  .upcoming-events {
+    @include madness();
+  }
+
+}
+
+img.responsive-img-w {
+  display: block;
+
+  @media screen and (max-width: 800px) {
+    max-width: 120%;
+    width: 120%;
+  }
+
+  @media screen and (min-width: 801px) {
+
+    width: 50%;
+  }
+
+  height: auto;
+}
