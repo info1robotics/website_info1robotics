@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import Navbar from './Navbar';
-import './scss/home.css';
+import './scss/home.scss';
 import LandingArea from './LandingArea';
 import TeamArea from './TeamArea';
 import EventsArea from './EventsArea';
@@ -18,7 +18,6 @@ class App extends React.Component {
         <LandingArea></LandingArea>
         <TeamArea></TeamArea>
         <SponsorsArea></SponsorsArea>
-        <EventsArea></EventsArea>
         
       </div>
     );
