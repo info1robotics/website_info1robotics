@@ -1,4 +1,5 @@
 import React from 'react';
+import { Waypoint } from 'react-waypoint';
 
 class TeamArea extends React.Component {
 
@@ -7,10 +8,10 @@ class TeamArea extends React.Component {
             {
                 imgName: "iulia.jpeg",
                 name: "Iulia Stanciu",
-                description: 'Team leader of the 3D Design team. Silver medalist at Romanian National Olympics in Astronomy and Astrophysics. ++(Custom clothing painter)'
+                description: ""
             },
             {
-                imgName: "",
+                imgName: "agatha.jpg",
                 name: "Agatha Mihalcea",
                 description: ""
             },
@@ -25,7 +26,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "bobo.PNG",
                 name: "Vlad Stefanescu",
                 description: ""
             },
@@ -35,7 +36,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "delia.jpeg",
                 name: "Delia Rosu",
                 description: ""
             },
@@ -45,7 +46,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "mada.jpg",
                 name: "Madalina Andronache",
                 description: ""
             },
@@ -117,13 +118,18 @@ class TeamArea extends React.Component {
 
     }
 
+    enteredArea = () => {
+        this.props.onEnter();
+    }
+
     render() {
         return (
             <div className="team-area container-fluid pl-lg-5 pr-lg-5">
                 <div className="row">
+                    <a id="team-section-anchor"></a>
                     <div id="team-section" className="col display-1 text-center">
                         Our Team
-                </div>
+                    </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-6">
@@ -146,6 +152,10 @@ class TeamArea extends React.Component {
                     unbelievably save humanity in its own way.</p>
                     </div>
                 </div>
+
+
+                <Waypoint
+                    onEnter={this.enteredArea}></Waypoint>
                 <div className="row justify-content-center mt-4">
                     <img id="big-img" className="responsive-img-h" src="https://scontent-otp1-1.cdninstagram.com/vp/abefd2c716da6c7c052f3b3bb82fcc6b/5E398BA5/t51.2885-15/sh0.08/e35/s640x640/52818309_1113481905520234_3358653585660069194_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_cat=110 640w,https://scontent-otp1-1.cdninstagram.com/vp/2997baf02802987f4b927ec09373e58a/5E176161/t51.2885-15/sh0.08/e35/s750x750/52818309_1113481905520234_3358653585660069194_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_cat=110 750w,https://scontent-otp1-1.cdninstagram.com/vp/cabee04b94469911c90353a14dc8d171/5E383A1F/t51.2885-15/e35/52818309_1113481905520234_3358653585660069194_n.jpg?_nc_ht=scontent-otp1-1.cdninstagram.com&_nc_cat=110 1080w" />
                 </div>

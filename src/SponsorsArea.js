@@ -7,7 +7,7 @@ class SponsorsArea extends React.Component {
             <div className="sponsors-area container-fluid">
                 <div className="row">
                     <div id="sponsors-section" className="col display-1 text-center">
-                        Our Sponsors
+                        Sponsors
                     </div>
                 </div>
                 <div className="row align-content-center mt-4">

@@ -1,10 +1,10 @@
 import React from "react";
-
+import $ from 'jquery';
 function Navbar() {
     return (
         <div className="container-fluid p-0 navigation">
             <div className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#"><img src={process.env.PUBLIC_URL + 'logo.png'}></img> </a>
+                <a className="navbar-brand" href="#"><img src={process.env.PUBLIC_URL + 'logocara.png'}></img> </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@ function Navbar() {
                     <ul className="navbar-nav mr-auto">
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#team-section">Team</a>
+                            <a className="nav-link" href="#team-section-anchor">Team</a>
                         </li>
 
                         <li className="nav-item">

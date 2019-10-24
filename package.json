@@ -6,11 +6,14 @@
     "babel-loader": "^8.0.6",
     "bootstrap": "^4.3.1",
     "fs": "^0.0.1-security",
+    "jquery": "^3.4.1",
     "js-yaml": "^3.13.1",
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-scripts": "3.2.0",
+    "react-scroll": "^1.7.14",
+    "react-waypoint": "^9.0.2",
     "rfs": "^9.0.0"
   },
   "scripts": {
