@@ -109,7 +109,7 @@ body {
   font-family: "SF Mono", Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  overflow-x: auto; // >:)
+  overflow-x: hidden; // >:)
   background-color: transparent;
 }
 
@@ -120,7 +120,7 @@ body {
   }
 
   .display-#{$index} {
-    font-size: 10vw;
+    font-size: calc(24px + 6vw);
     font-family: "Yumi", 'Courier New', Courier, monospace;
   }
 }
@@ -160,6 +160,7 @@ body {
       img {
         max-width: 7.1vh;
         height: auto;
+        max-height: 7.1vh;
       }
     }
     .nav-item {
@@ -173,6 +174,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-left: 0;
+  padding-right: 0;
   margin-bottom: 0;
   box-sizing: border-box;
 
@@ -207,7 +210,7 @@ body {
       width: 100%;
       padding: 1rem;
       text-align: center;
-      font-size: calc(32px + 6vw);
+      font-size: calc(32px + 4vw);
       font-family: "Share Tech Mono", monospace;
       background-color: rgba(255, 255, 255, 0.76); 
       color: #000000;
@@ -219,7 +222,7 @@ body {
       width: auto;
       margin-top: 1rem;
       text-align: center;
-      font-size: calc(16px + 3.7vw);
+      font-size: calc(16px + 2.5vw);
       font-weight: bold;
       letter-spacing: -3px;
       font-family: "SF Mono", Arial, Helvetica, sans-serif;
@@ -233,18 +236,9 @@ body {
 
 img.responsive-img-h {
   display: block;
-
-  @media screen and (max-width: 800px) {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  @media screen and (min-width: 801px) {
-    max-width: 100%;
-    width: 70%;
-  }
-
-  height: auto;
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
 }
 
 
@@ -259,6 +253,27 @@ img.responsive-img-h {
   }
 }
 
+.card-member {
+  background-image: linear-gradient(-60deg, rgb(255, 175, 71), #FF8800);
+  color: white;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+
+  .card-body {
+    height: 100%;
+  }
+}
+
+.card-mentor {
+  background-image: linear-gradient(-120deg, #ACCC34, #39B44A);
+  color: white;
+  height: 100%;
+
+  .card-body {
+    height: 100%;
+  }
+}
+
 .member-card-col {
   max-width: 400px;
 }
@@ -267,25 +282,7 @@ img.responsive-img-h {
   background-color: #0B6623 !important;
 }
 
-@media screen and (max-width: 511px) {
-  #sponsorsCarousel>.carousel-inner>.carousel-item>img {
-    height: 337px;
-    width: 337px;
-  }
 
-}
-
-@media screen and (min-width: 512px) {
-  #sponsorsCarousel>.carousel-inner>.carousel-item>img {
-    height: 512px;
-    width: 512px;
-  }
-}
-
-
-#sponsorsCarousel>.carousel-inner>.carousel-item>.carousel-caption {
-  background: rgba(0, 0, 0, 0.171);
-}
 
 .card-title {
   @include font-size(1.6rem);
@@ -298,11 +295,6 @@ img.responsive-img-h {
 
 
 .team-area {
-  .row {
-    .display-1 {
-      font-size: 8vw;
-    }
-  }
   background-color: #FFFFFF;
   color: #000000;
   padding-top: 16px;
@@ -311,7 +303,26 @@ img.responsive-img-h {
 }
 
 .sponsors-area {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #FFFFFF;
+  color: #000000;
+
+  .sponsors-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 80%;
+      height: 30vh;
+      object-fit: contain;
+    }
+  }
+
+
+  
 }
 
 .events-area {
@@ -325,22 +336,6 @@ img.responsive-img-h {
     @include madness();
   }
 
-}
-
-img.responsive-img-w {
-  display: block;
-
-  @media screen and (max-width: 800px) {
-    max-width: 120%;
-    width: 120%;
-  }
-
-  @media screen and (min-width: 801px) {
-
-    width: 50%;
-  }
-
-  height: auto;
 }
 
 .upbtn {

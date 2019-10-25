@@ -16,12 +16,12 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "ana.jpg",
                 name: "Ana Raicu",
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "rares.jpg",
                 name: "Rares Avram",
                 description: ""
             },
@@ -41,7 +41,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "horia.jpg",
                 name: "Horia Dumitru",
                 description: ""
             },
@@ -56,7 +56,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "seby.jpeg",
                 name: "Sebastian Georgescu",
                 description: ""
             },
@@ -71,34 +71,44 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "soare.jpeg",
                 name: "Stefan Soare",
                 description: ""
             },
+            {
+                imgName: "razvan.jpeg",
+                name: "Razvan Toma",
+                description: ""
+            }
+
+        ],
+        teamMentors: [
             {
                 imgName: "",
                 name: "Dana Lica",
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "tudor.jpg",
                 name: "Tudor Avram",
                 description: ""
             },
             {
-                imgName: "",
+                imgName: "luminita.jpg",
                 name: "Luminita Avram",
                 description: ""
             },
-
         ],
         teamMembersHTML: [
+
+        ],
+        teamMentorsHTML: [
 
         ]
     }
 
     componentDidMount() {
-        var result = [];
+        var result1 = [];
         for(var i of this.state.teamMembers) {
             
             var card = (
@@ -112,9 +122,25 @@ class TeamArea extends React.Component {
                     </div>
                 </div>
             );
-            result.push(card);
+            result1.push(card);
         }
-        this.setState({ teamMembersHTML: result });
+        var result2 = [];
+        for (var i of this.state.teamMentors) {
+
+            var card = (
+                <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
+                    <div className="card-member">
+                        <img src={((i.imgName !== "") ? process.env.PUBLIC_URL + i.imgName : process.env.PUBLIC_URL + "default.jpeg")} className="card-img-top" />
+                        <div className="card-body">
+                            <h5 className="card-title text-center">{i.name}</h5>
+                            <p className="card-text text-center">{i.description}</p>
+                        </div>
+                    </div>
+                </div>
+            );
+            result2.push(card);
+        }
+        this.setState({ teamMembersHTML: result1 , teamMentorsHTML: result2});
 
     }
 
@@ -128,29 +154,32 @@ class TeamArea extends React.Component {
                 <div className="row">
                     <a id="team-section-anchor"></a>
                     <div id="team-section" className="col display-1 text-center">
-                        Our Team
+                        Team
                     </div>
                 </div>
                 <div className="row mt-4">
                     <div className="col-md-6">
-                        <p>We are the infO(1)Robotics Team – RO 140 / 15993 - from “Ion Luca Caragiale” High -
+                        <p>We are the infO(1)Robotics Team – RO 140 - from “Ion Luca Caragiale” High -
                         School, Ploiesti, Romania. Our team started its actions on April 2018, and it is
-                        coordinated by our main mentor Daniela Lica, a computer – programming teacher.
-                        Our team is composed of 15 members and 3 volunteers and each of them is currently
+                        coordinated by our main mentor Daniela Lica, a Computer – Programming teacher.
+                        Our team is composed of 15 members and 36 volunteers and each of them is currently
                         working in the STEM fields with extracurricular activities which fit their sub-teams.
                         Our team started with no budget and has been gradually building up its financial
                         resources.
                 </p>
                     </div>
                     <div className="col-md-6">
-                        <p>infO(1)Robotics is currently participating at FIRST Tech Challenge and expects to
-                        develop a greater knowledge for the future’s main goal: Robots and Artificial
-                        Intelligence.
+                        <p>infO(1)Robotics is currently participating for the second time at FIRST Tech Challenge and expects to
+                        consolidate the knowledge accumulated over the course of the first year. At the Regionals competition, we were awarded with the 2<sup>nd</sup> place of Inspire Award, but also with the title of the 2<sup>nd</sup> pick in the Winning Alliance. We qualified as the 3<sup>rd</sup> team to the National Stage at which we won the 2<sup>nd</sup> place of the Control Award.
+                        </p>
+                    </div>
+                </div>
+                <div className="row-mt-4">
+                    <p>
                         We combine work and pleasure, we always train hard but in an enjoyable way. By
                         sharing opinions and learning about team work, we believe we can get creative
                         enough to someday find a revolutionary and feasible idea of a robot that could
                     unbelievably save humanity in its own way.</p>
-                    </div>
                 </div>
 
 
@@ -172,8 +201,14 @@ class TeamArea extends React.Component {
                         to perform better during FTC, but also to realize that we may become better people
                 and colleagues, no matter the context or situation.</div>
                 </div>
+                <div className="display-1 text-center mt-4">Members</div>
                 <div className="row mt-4 justify-content-center m-3">
                     {this.state.teamMembersHTML}
+                </div>
+
+                <div className="display-1 text-center mt-4">Mentors</div>
+                <div className="row mt-4 justify-content-center m-3">
+                    {this.state.teamMentorsHTML}
                 </div>
             </div>
         );

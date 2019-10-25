@@ -37,7 +37,7 @@ class App extends React.Component {
         <LandingArea></LandingArea>
         <TeamArea onEnter={this.onTeamAreaEntered}></TeamArea>
         <SponsorsArea></SponsorsArea>
-        {(this.state.showUpBtn ? <img className="upbtn" onClick={this.onUpBtnClicked} src={process.env.PUBLIC_URL + "upbtn.svg"}></img> : null )}
+        {(this.state.showUpBtn ? <input type="image" className="upbtn" onClick={this.onUpBtnClicked} src={process.env.PUBLIC_URL + "upbtn.svg"}></input> : null )}
       </div>
     );
   }

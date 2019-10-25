@@ -68,7 +68,7 @@ class LandingArea extends React.Component {
                 <div id="vid-background-dark" />
                 <div className="cont">
                     <div id="landingTitle" className="main-title" ref="landingTitle">.</div>
-                    <p className="slogan">something something</p>
+                    <p className="slogan">Education Through Innovation</p>
                 </div>
             </div>
         );
