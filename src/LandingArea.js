@@ -1,5 +1,5 @@
 import React from "react";
-
+import landingVid from './media/landingVid.mp4';
 
 class LandingArea extends React.Component { 
     componentDidMount = async () => {
@@ -63,7 +63,7 @@ class LandingArea extends React.Component {
         return (
             <div className="landing-area container-fluid">
                 <video autoPlay muted loop id="vid-background">
-                    <source src={process.env.PUBLIC_URL + "vid.mp4"} type="video/mp4" />
+                    <source src={landingVid} type="video/mp4" />
                 </video>
                 <div id="vid-background-dark" />
                 <div className="cont">

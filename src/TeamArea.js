@@ -1,82 +1,96 @@
 import React from 'react';
 import { Waypoint } from 'react-waypoint';
+import defaultImg from './media/default.jpeg';
+import agathaImg from './media/agatha.jpg';
+import anaImg from './media/ana.jpeg';
+import boboImg from './media/bobo.jpeg';
+import deliaImg from './media/delia.jpeg';
+import horiaImg from './media/horia.JPG';
+import iuliaImg from './media/iulia.jpeg';
+import luminitaImg from './media/luminita.jpg';
+import madaImg from './media/mada.jpeg';
+import raresImg from './media/rares.JPG';
+import razvanImg from './media/razvan.jpeg';
+import sebyImg from './media/seby.jpeg';
+import soareImg from './media/soare.jpeg';
+import tudorImg from './media/tudor.jpg';
 
 class TeamArea extends React.Component {
 
     state = {
         teamMembers: [
             {
-                imgName: "iulia.jpeg",
+                img: iuliaImg,
                 name: "Iulia Stanciu",
                 description: ""
             },
             {
-                imgName: "agatha.jpg",
+                img: agathaImg,
                 name: "Agatha Mihalcea",
                 description: ""
             },
             {
-                imgName: "ana.jpg",
+                img: anaImg,
                 name: "Ana Raicu",
                 description: ""
             },
             {
-                imgName: "rares.jpg",
+                img: raresImg,
                 name: "Rares Avram",
                 description: ""
             },
             {
-                imgName: "bobo.PNG",
+                img: boboImg,
                 name: "Vlad Stefanescu",
                 description: ""
             },
             {
-                imgName: "",
+                img: null,
                 name: "David Cirnici",
                 description: ""
             },
             {
-                imgName: "delia.jpeg",
+                img: deliaImg,
                 name: "Delia Rosu",
                 description: ""
             },
             {
-                imgName: "horia.jpg",
+                img: horiaImg,
                 name: "Horia Dumitru",
                 description: ""
             },
             {
-                imgName: "mada.jpg",
+                img: madaImg,
                 name: "Madalina Andronache",
                 description: ""
             },
             {
-                imgName: "",
+                img: null,
                 name: "Alexandru Sandulescu",
                 description: ""
             },
             {
-                imgName: "seby.jpeg",
+                img: sebyImg,
                 name: "Sebastian Georgescu",
                 description: ""
             },
             {
-                imgName: "",
+                img: null,
                 name: "Matei Staicu",
                 description: ""
             },
             {
-                imgName: "",
+                img: null,
                 name: "Matei Marussi",
                 description: ""
             },
             {
-                imgName: "soare.jpeg",
+                img: soareImg,
                 name: "Stefan Soare",
                 description: ""
             },
             {
-                imgName: "razvan.jpeg",
+                img: razvanImg,
                 name: "Razvan Toma",
                 description: ""
             }
@@ -84,17 +98,17 @@ class TeamArea extends React.Component {
         ],
         teamMentors: [
             {
-                imgName: "",
+                img: null,
                 name: "Dana Lica",
                 description: ""
             },
             {
-                imgName: "tudor.jpg",
+                img: tudorImg,
                 name: "Tudor Avram",
                 description: ""
             },
             {
-                imgName: "luminita.jpg",
+                img: luminitaImg,
                 name: "Luminita Avram",
                 description: ""
             },
@@ -110,11 +124,12 @@ class TeamArea extends React.Component {
     componentDidMount() {
         var result1 = [];
         for(var i of this.state.teamMembers) {
-            
+            var source = defaultImg;
+            if(i.img !== null) source = i.img;
             var card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card">
-                        <img src={((i.imgName !== "") ? process.env.PUBLIC_URL + i.imgName : process.env.PUBLIC_URL + "default.jpeg")} className="card-img-top" />
+                        <img src={source} className="card-img-top" />
                         <div className="card-body">
                             <h5 className="card-title text-center">{i.name}</h5>
                             <p className="card-text text-center">{i.description}</p>
@@ -130,7 +145,7 @@ class TeamArea extends React.Component {
             var card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card-member">
-                        <img src={((i.imgName !== "") ? process.env.PUBLIC_URL + i.imgName : process.env.PUBLIC_URL + "default.jpeg")} className="card-img-top" />
+                        <img src={(i.img !== null) ? i.img : defaultImg} className="card-img-top" />
                         <div className="card-body">
                             <h5 className="card-title text-center">{i.name}</h5>
                             <p className="card-text text-center">{i.description}</p>
