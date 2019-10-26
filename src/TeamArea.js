@@ -147,10 +147,14 @@ class TeamArea extends React.Component {
         var result2 = [];
         for (var i of this.state.teamMentors) {
 
+            var source = defaultImg;
+            if (i.img !== null) source = i.img;
             var card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card-member">
-                        <img src={(i.img !== null) ? i.img : defaultImg} className="card-img-top" />
+                        <LazyLoad>
+                            <img src={source} className="card-img-top" />
+                        </LazyLoad>
                         <div className="card-body">
                             <h5 className="card-title text-center">{i.name}</h5>
                             <p className="card-text text-center">{i.description}</p>
