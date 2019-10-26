@@ -1,19 +1,20 @@
 import React from 'react';
 import { Waypoint } from 'react-waypoint';
-import defaultImg from './media/default.jpeg';
+import defaultImg from './media/default.jpg';
 import agathaImg from './media/agatha.jpg';
-import anaImg from './media/ana.jpeg';
-import boboImg from './media/bobo.jpeg';
-import deliaImg from './media/delia.jpeg';
-import horiaImg from './media/horia.JPG';
-import iuliaImg from './media/iulia.jpeg';
+import anaImg from './media/ana.jpg';
+import boboImg from './media/bobo.jpg';
+import deliaImg from './media/delia.jpg';
+import horiaImg from './media/horia.jpg';
+import iuliaImg from './media/iulia.jpg';
 import luminitaImg from './media/luminita.jpg';
-import madaImg from './media/mada.jpeg';
-import raresImg from './media/rares.JPG';
+import madaImg from './media/mada.jpg';
+import raresImg from './media/rares.jpg';
 import razvanImg from './media/razvan.jpeg';
-import sebyImg from './media/seby.jpeg';
-import soareImg from './media/soare.jpeg';
+import sebyImg from './media/seby.jpg';
+import soareImg from './media/soare.jpg';
 import tudorImg from './media/tudor.jpg';
+import alexImg from './media/alex.jpg';
 
 class TeamArea extends React.Component {
 
@@ -65,7 +66,7 @@ class TeamArea extends React.Component {
                 description: ""
             },
             {
-                img: null,
+                img: alexImg,
                 name: "Alexandru Sandulescu",
                 description: ""
             },
