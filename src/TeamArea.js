@@ -16,6 +16,7 @@ import soareImg from './media/soare.jpg';
 import tudorImg from './media/tudor.jpg';
 import alexImg from './media/alex.jpg';
 
+import LazyLoad from 'react-lazy-load';
 class TeamArea extends React.Component {
 
     state = {
@@ -130,7 +131,10 @@ class TeamArea extends React.Component {
             var card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card">
-                        <img src={source} className="card-img-top" />
+                        <LazyLoad>
+                            <img src={source} className="card-img-top" />
+                        </LazyLoad>
+                        
                         <div className="card-body">
                             <h5 className="card-title text-center">{i.name}</h5>
                             <p className="card-text text-center">{i.description}</p>
