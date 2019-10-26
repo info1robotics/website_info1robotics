@@ -5,7 +5,7 @@ import agathaImg from './media/agatha.jpg';
 import anaImg from './media/ana.jpg';
 import boboImg from './media/bobo.jpg';
 import deliaImg from './media/delia.jpg';
-import horiaImg from './media/horia.jpg';
+import horiaImg from './media/horia.JPG';
 import iuliaImg from './media/iulia.jpg';
 import luminitaImg from './media/luminita.jpg';
 import madaImg from './media/mada.jpg';
