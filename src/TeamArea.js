@@ -9,7 +9,7 @@ import horiaImg from './media/horia.JPG';
 import iuliaImg from './media/iulia.jpg';
 import luminitaImg from './media/luminita.jpg';
 import madaImg from './media/mada.jpg';
-import raresImg from './media/rares.jpg';
+import raresImg from './media/rares.JPG';
 import razvanImg from './media/razvan.jpeg';
 import sebyImg from './media/seby.jpg';
 import soareImg from './media/soare.jpg';
