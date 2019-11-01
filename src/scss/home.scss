@@ -341,17 +341,27 @@ img.responsive-img-h {
   
 }
 
-.events-area {
-  background-color: #000000;
-
-  .past-events {
-    @include madness();
+.footer-area {
+  display: flex;
+  justify-content: center;
+  height: 7vh;
+  padding: 16px;
+  background-color: white;
+  border-top: 4px solid #39B44A;
+  * {
+    height: 100%;
   }
 
-  .upcoming-events {
-    @include madness();
+  .separator {
+    border-left: 1px solid #39B44A;
+    border-right: 1px solid #39B44A;
+    margin-left: 8px;
+    margin-right: 8px;
   }
 
+  a>img {
+    object-fit: cover;
+  }
 }
 
 .upbtn {
@@ -370,3 +380,4 @@ img.responsive-img-h {
   top: -8.1vh;
   visibility: hidden;
 }
+

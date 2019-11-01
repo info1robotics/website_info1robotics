@@ -1,5 +1,7 @@
 import React from 'react';
 import { Waypoint } from 'react-waypoint';
+import LoadingImage from './LoadingImage';
+
 import defaultImg from './media/default.jpg';
 import agathaImg from './media/agatha.jpg';
 import anaImg from './media/ana.jpg';
@@ -124,14 +126,15 @@ class TeamArea extends React.Component {
     }
 
     componentDidMount() {
-        var result1 = [];
-        for(var i of this.state.teamMembers) {
-            var source = defaultImg;
+        let result1 = [];
+        let nr = 0;
+        for(let i of this.state.teamMembers) {
+            let source = defaultImg;
             if(i.img !== null) source = i.img;
-            var card = (
+            let card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card">
-                        <LazyLoad>
+                        <LazyLoad key={nr++} placeholder={<LoadingImage />}>
                             <img src={source} className="card-img-top" />
                         </LazyLoad>
                         
@@ -144,15 +147,15 @@ class TeamArea extends React.Component {
             );
             result1.push(card);
         }
-        var result2 = [];
-        for (var i of this.state.teamMentors) {
+        let result2 = [];
+        for (let i of this.state.teamMentors) {
 
-            var source = defaultImg;
+            let source = defaultImg;
             if (i.img !== null) source = i.img;
-            var card = (
+            let card = (
                 <div className="member-card-col col-lg-4 col-md-6 col-offset-2 mt-2 pb-3">
                     <div className="card-member">
-                        <LazyLoad>
+                        <LazyLoad placeholder={<LoadingImage></LoadingImage>}>
                             <img src={source} className="card-img-top" />
                         </LazyLoad>
                         <div className="card-body">
