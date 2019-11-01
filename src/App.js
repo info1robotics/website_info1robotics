@@ -9,7 +9,6 @@ import SponsorsArea from './SponsorsArea';
 import { Waypoint } from 'react-waypoint';
 import { animateScroll as scroll } from "react-scroll";
 import Footer from './Footer';
-import LoadingImage from './LoadingImage';
 
 class App extends React.Component {
 
