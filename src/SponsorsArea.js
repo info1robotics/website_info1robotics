@@ -7,9 +7,14 @@ class SponsorsArea extends React.Component {
         return (
             <div id="sponsors-section" className="sponsors-area">
                 <div className="display-1">Sponsors</div>
-                <div className="sponsors-container">
-                    <a href="http://crisco.ro/"><img src={logoCrisco}></img></a>
+                <div className="sponsors-container-kilo">
+                    <div className="sponsors-class">
+                        Kilo
+                    </div>
+                    <div className="sponsors-logos">
+                        <a href="http://crisco.ro/"><img src={logoCrisco}></img></a></div>
                 </div>
+                <a href="mailto:info1robotics@gmail.com" className="become-sponsor">Want to become a sponsor? Contact us!</a>
             </div>
         );
     }

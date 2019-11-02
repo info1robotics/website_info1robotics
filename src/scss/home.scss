@@ -90,6 +90,7 @@ $enable-rounded: false;
       .collapse {
         background-color: #ffffff;
       }
+
     }
   }
 }
@@ -122,7 +123,7 @@ body {
   }
 
   .display-#{$index} {
-    font-size: calc(24px + 6vw);
+    font-size: calc(18px + 6vw);
     font-family: "Yumi", 'Courier New', Courier, monospace;
   }
 }
@@ -262,10 +263,7 @@ img.responsive-img-h {
   background-image: linear-gradient(-120deg, #ACCC34, #39B44A);
   color: white;
   height: 100%;
-  
-  .card-body {
-    height: 100%;
-  }
+
 }
 
 .card-member {
@@ -274,20 +272,8 @@ img.responsive-img-h {
   height: 100%;
   border: 1px solid rgba(0, 0, 0, 0.125);
 
-  .card-body {
-    height: 100%;
-  }
 }
 
-.card-mentor {
-  background-image: linear-gradient(-120deg, #ACCC34, #39B44A);
-  color: white;
-  height: 100%;
-
-  .card-body {
-    height: 100%;
-  }
-}
 
 .member-card-col {
   max-width: 400px;
@@ -327,22 +313,61 @@ img.responsive-img-h {
   color: #000000;
   padding-bottom: 32px;
 
-  .sponsors-container {
+  .sponsors-container-kilo {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    a {
-      width: 80vw;
-      height: 100%;
-      object-fit: contain;
 
-      img {
-        width: 100%;
+    box-shadow: inset 0 0 10px 0 #ACCC34;
+
+    .sponsors-class {
+      height: 100%;
+      @media screen and (max-width: 800px) {
+        width: 95%;
+      }
+      font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+      font-size: calc(16px + 3vw);
+      padding: 0.1vw;
+      text-align: center;
+
+    }
+
+    .sponsors-logos {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 80%;
+
+      @media screen and (max-width: 800px) {
+        width: 95%;
+      }
+      height: 100%;
+      padding: 0.1vw;
+
+      a {
+        width: 25%;
         height: 100%;
         object-fit: contain;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
+    
   }
+.become-sponsor {
+  font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+  font-size: calc(16px + 1.5vw);
+  color: #ACCC34;
+  text-align: center;
+  padding-top: 16px;
+}
 
 
   
@@ -378,24 +403,25 @@ img.responsive-img-h {
 
 
 
+
 }
 
 .footer-area {
   display: flex;
   justify-content: center;
-  height: 7vh;
-  padding: 16px;
+  height: 8.5vh;
+  padding: 20px;
   background-color: white;
-  border-top: 4px solid #39B44A;
+  box-shadow: inset 0px 0px 10px rgba(57, 180, 73, 0.685);
   * {
     height: 100%;
   }
 
   .separator {
-    border-left: 1px solid #39B44A;
-    border-right: 1px solid #39B44A;
-    margin-left: 8px;
-    margin-right: 8px;
+    width: 10px;
+    color: transparent;
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   a>img {
