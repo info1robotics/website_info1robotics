@@ -17,6 +17,7 @@ import sebyImg from './media/seby.jpg';
 import soareImg from './media/soare.jpg';
 import tudorImg from './media/tudor.jpg';
 import alexImg from './media/alex.jpg';
+import dlicaImg from './media/dlica.jpeg';
 
 class TeamArea extends React.Component {
 
@@ -101,7 +102,7 @@ class TeamArea extends React.Component {
         ],
         teamMentors: [
             {
-                img: null,
+                img: dlicaImg,
                 name: "Dana Lica",
                 description: ""
             },

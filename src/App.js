@@ -6,6 +6,8 @@ import LandingArea from './LandingArea';
 import TeamArea from './TeamArea';
 import EventsArea from './EventsArea';
 import SponsorsArea from './SponsorsArea';
+import PartenersArea from './PartenersArea';
+
 import { Waypoint } from 'react-waypoint';
 import { animateScroll as scroll } from "react-scroll";
 import Footer from './Footer';
@@ -38,6 +40,7 @@ class App extends React.Component {
         <LandingArea></LandingArea>
         <TeamArea onEnter={this.onTeamAreaEntered}></TeamArea>
         <SponsorsArea></SponsorsArea>
+        <PartenersArea></PartenersArea>
         <Footer></Footer>
 
         {(this.state.showUpBtn ? <input type="image" className="upbtn" onClick={this.onUpBtnClicked} src={process.env.PUBLIC_URL + "upbtn.svg"}></input> : null )}

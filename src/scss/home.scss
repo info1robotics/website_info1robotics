@@ -325,20 +325,59 @@ img.responsive-img-h {
   align-items: center;
   background-color: #FFFFFF;
   color: #000000;
+  padding-bottom: 32px;
 
   .sponsors-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    img {
-      width: 20vw;
+    a {
+      width: 80vw;
       height: 100%;
       object-fit: contain;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
 
 
   
+}
+
+.parteners-area {
+
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFFFFF;
+  color: #000000;
+  padding-bottom: 32px;
+
+  .parteners-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a {
+      width: 80vw;
+      height: 100%;
+      object-fit: contain;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+
+
 }
 
 .footer-area {
