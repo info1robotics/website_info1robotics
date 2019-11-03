@@ -12,7 +12,8 @@ class SponsorsArea extends React.Component {
                         Kilo
                     </div>
                     <div className="sponsors-logos">
-                        <a href="http://crisco.ro/"><img src={logoCrisco}></img></a></div>
+                        <a href="http://crisco.ro/"><img src={logoCrisco}></img></a>
+                    </div>
                 </div>
                 <a href="mailto:info1robotics@gmail.com" className="become-sponsor">Want to become a sponsor? Contact us!</a>
             </div>
