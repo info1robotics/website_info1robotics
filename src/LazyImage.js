@@ -8,7 +8,6 @@ class LazyImage extends React.Component {
     state = {
         reachedArea: false,
         imageStyle: {height: "0", width: "0"},
-        spinnerStyle: {marginBottom: "-600px"},
     }
 
     enteredArea = () => {
@@ -25,7 +24,7 @@ class LazyImage extends React.Component {
     render() {
         return (
             <div>
-                <Waypoint onEnter={this.enteredArea}></Waypoint>
+                <Waypoint onEnter={this.enteredArea} bottomOffset="-500px"></Waypoint>
                 {this.state.reachedArea? <img src={this.props.src} onLoad={this.imageLoaded} className="card-img-top" style={this.state.imageStyle} /> : null}
                 <LoadingSpinner style={this.state.spinnerStyle}></LoadingSpinner>
             </div>
