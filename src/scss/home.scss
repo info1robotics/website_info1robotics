@@ -414,8 +414,9 @@ img.responsive-img-h {
 
     }
     #logo-liceu {
+      margin-top: 16px;
       width: 100vw;
-      height: 10vw;
+      height: calc(50px + 10vw);
     }
   }
 
