@@ -328,14 +328,18 @@ img.responsive-img-h {
 
     .sponsors-class {
       height: 100%;
-      @media screen and (max-width: 800px) {
-        width: 95%;
-      }
+      width: 95%;
       font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
       font-size: calc(16px + 3vw);
-      padding: 0.1vw;
       text-align: center;
 
+    }
+
+    .sponsors-separator {
+      margin-top: -16px;
+      width: 80%;
+      height: 3px;
+      background-color: #ACCC34;
     }
 
     .sponsors-logos {
@@ -343,13 +347,11 @@ img.responsive-img-h {
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      width: 80%;
 
-      @media screen and (max-width: 800px) {
-        width: 95%;
-      }
+      width: 95%;
+
       height: 100%;
-      padding: 0.1vw;
+      padding: 0.7vw;
 
       a {
         width: 25%;

@@ -11,6 +11,7 @@ class SponsorsArea extends React.Component {
                     <div className="sponsors-class">
                         Kilo
                     </div>
+                    <div className="sponsors-separator"></div>
                     <div className="sponsors-logos">
                         <a href="http://crisco.ro/"><img src={logoCrisco}></img></a>
                     </div>
