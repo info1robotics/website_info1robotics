@@ -3,12 +3,12 @@ import { Waypoint } from 'react-waypoint';
 import LazyImage from './LazyImage';
 
 import defaultImg from './media/default.jpg';
-import agathaImg from './media/agatha.jpg';
-import anaImg from './media/ana.jpg';
+import agathaImg from './media/agatha.jpeg';
+import anaImg from './media/ana.jpeg';
 import boboImg from './media/bobo.jpg';
 import deliaImg from './media/delia.jpg';
 import horiaImg from './media/horia.JPG';
-import iuliaImg from './media/iulia.jpg';
+import iuliaImg from './media/iulia.jpeg';
 import luminitaImg from './media/luminita.jpg';
 import madaImg from './media/mada.jpg';
 import raresImg from './media/rares.JPG';
